@@ -9,9 +9,9 @@ The BreakableBond contract's stored ether is the essence of the bond. Indeed, th
 
 Interestingly, this implementation of the contract also allows third parties (addresses) to break the bond. To do this, the third party must send to the contract an amount of ether equal to the total amount of ether stored by the bond. When this happens, the bond is broken, and the bond parties receive *double* the amount of ether they paid to form the bond. This is a cost that is imposed on the third party for breaking a bond it is not party to, and a reparation to the bond parties for the inconvenience of having their bond broken.
 
-It is envisioned that the Ethereum-aware systems of the future will utilize BreakableBond contracts to coordinate behavior among their components or with other such systems. These systems may take part in numerous bonds of various values or durations. These bonds, and the distribution of ether across them, represents a new dimension in the state of a system that would not have been possible without Ethereum.
+It is envisioned that the Ethereum-aware systems of the future will utilize BreakableBond contracts to coordinate behavior among their components or with other such systems. These systems may take part in numerous bonds of various values or durations. These bonds, and the distribution of ether across them, represent a new dimension in system state that would not have been possible without Ethereum.
 
-Note: the protocal for establishing a BreakableBond is unspecified.
+Note: the protocol for establishing a BreakableBond is unspecified.
 
 The BreakableBond contract can be modified in the following parameters:
 * The number of parties
