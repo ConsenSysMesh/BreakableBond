@@ -18,6 +18,38 @@ The BreakableBond contract can be modified in the following parameters:
 * The amount of ether that each party needs to submit to activate the bond
 * The permitted ways of breaking the bond
 
+## API
+``BreakableBond(address p1, address p2, uint amt)``
+- Constructor. Create the contract specifying two parties and an ether amount.
+
+``add_funds()``
+- Add funds (perhaps incrementally) to create the bond. Called by each of the two parties.
+
+``breakit()``
+- Break the bond and return the stored ether. Can also be called by a third party.
+
+``cancel()``
+- Called by the one of the parties before the bond is formed.
+
+``get_party1() returns (address)``
+- Get the address of the first party.
+
+``get_party2() returns (address)``
+- Get the address of the second party.
+
+``get_amount() returns (uint)``
+- Get the bond's ether target.
+
+``get_party1_balance() returns (uint)``
+- Get the first party's ether balance.
+
+``get_party2_balance() returns (uint)``
+- Get the second party's ether balance.
+
+``get_status() returns (Status)``
+- Get the status of the contract (Pending, Active, Broken, Cancelled).
+
+
 ## Source code
 ```
 contract BreakableBond {
