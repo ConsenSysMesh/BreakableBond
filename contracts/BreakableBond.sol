@@ -49,9 +49,9 @@ contract BreakableBond {
             party2balance = 0;
             status = Status.Broken;
         } else if (msg.value >= party1balance + party2balance) {
-            party1.send(party1balance * 2);
+            party1.send(party1balance + (msg.value * party1balance/(party1balance + party2balance)));
             party1balance = 0;
-            party2.send(party2balance * 2);
+            party2.send(party1balance + (msg.value * party2balance/(party1balance + party2balance)));
             party2balance = 0;
             status = Status.Broken;
         }
